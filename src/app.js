@@ -14,6 +14,7 @@ console.log(publicDirectoryPath)
 
 
 const app = express()
+const port=process.env.PORT || 3000
 
 app.use(express.static(publicDirectoryPath))
 
@@ -112,7 +113,7 @@ app.get('*', (req,res) => {
          })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
 console.log('The Server is Running')
 
 })
